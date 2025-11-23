@@ -4,7 +4,7 @@
 
 This is a geospatial investigation of Santa Fe, New Mexico—not a dissertation, not a data dump, but something in between. Think of it as field notes from someone trying to understand a place through the lens of where people live, how land is used, and where water flows.
 
-![Santa Fe Field Notes](docs/santa-fe-masthead.png)
+![Santa Fe Field Notes](docs/santa-fe-masthead-2.png)
 
 ## What This Is
 
