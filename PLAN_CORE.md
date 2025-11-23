@@ -98,27 +98,42 @@ I can refine later. The point is to establish the full pipeline **once**.
 
 When I'm staring at 15 themes and 40 datasets, I'll prioritize work that:
 
-1. **Matters beyond my own curiosity**
+1. **Challenges power rather than documenting inequality**
+
+   - Does this make visible the mechanisms of displacement (corporate ownership, STRs, speculation)?
+   - Could this analysis support housing justice movements or Indigenous sovereignty?
+
+2. **Matters beyond my own curiosity**
 
    - Would a neighbor, planner, organizer, or friend care about this question?
+   - Can community organizations use this for advocacy?
 
-2. **Is tractable in 1–2 weeks**
+3. **Questions the categories themselves**
+
+   - Am I interrogating colonial spatial units (parcels, census tracts)?
+   - Can I layer alternative geographies (watersheds, walking distances, ceremonial landscapes)?
+
+4. **Is tractable in 1–2 weeks**
 
    - Can I get from question → draft map → draft note in that timeframe?
+   - But also: does "tractable" mean avoiding harder questions about power?
 
-3. **Has accessible, trustworthy data**
+5. **Has accessible, trustworthy data**
 
    - At least one decent public dataset; I'm not stuck in scraping hell.
+   - But also: whose data is this? Who decided what to count?
 
-4. **Connects to my anchor themes**
+6. **Connects to my anchor themes**
 
    - Land & housing; water & watershed; mobility & access; health & equity.
+   - With explicit attention to: displacement, sovereignty, reciprocity
 
-5. **Teaches me something about my immediate lived environment**
+7. **Teaches me something about my immediate lived environment**
 
    - Bonus points if it changes how I walk, ride, or relate to the city.
+   - Extra bonus if it reveals hidden power structures in familiar places.
 
-If a project doesn't hit at least **3/5** of these, it goes in the backlog, not the active queue.
+If a project doesn't hit at least **4/7** of these, it goes in the backlog, not the active queue.
 
 ---
 
@@ -216,8 +231,17 @@ docs/
 
 For now I'll lean toward:
 
-1. **Land & Housing**
-2. **Water & Watershed**
+1. **Land & Housing** — with focus on displacement mechanisms and resistance
+2. **Water & Watershed** — understanding water as relation, not resource
+
+**Counter-Mapping Approaches:**
+
+Instead of just documenting what is, actively map:
+
+* **Power structures:** Corporate landlords, investment properties, STR concentrations
+* **Displacement pressure:** Where long-term residents are fighting to stay
+* **Community assets:** Mutual aid networks, gathering spaces, sacred sites (with permission)
+* **Alternative futures:** Community land trust possibilities, Indigenous governance models
 
 **Ethical stance (summary):**
 
@@ -226,16 +250,21 @@ For now I'll lean toward:
 * I will avoid maps that:
 
   * Expose specific vulnerable people or locations (e.g., encampments, treatment centers).
-
+  * Enable surveillance or displacement through "who lives where" mapping.
   * Sensationalize suffering (addiction, houselessness, crime).
+  * Naturalize colonial categories without critique.
 
 * I'll prioritize:
 
-  * Context: numbers + history + lived experience.
+  * **Counter-narratives:** Maps that challenge dominant stories about Santa Fe.
+  * **Power analysis:** Making visible the mechanisms of inequality.
+  * **Context:** Numbers + history + lived experience + structural analysis.
+  * **Care:** Asking "who could be harmed?" AND "who benefits from this analysis?"
+  * **Reciprocity:** How does this work give back to affected communities?
 
-  * Care: asking "who could be harmed if this map circulates?"
-
-Extended reflection and land acknowledgment live in `docs/ethics_positionality.md`.
+Extended reflection, critical framework, and ongoing questions live in:
+- `docs/ethics_positionality.md`
+- `docs/CRITICAL_REFLECTIONS.md`
 
 ---
 
