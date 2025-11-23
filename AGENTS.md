@@ -1,5 +1,13 @@
 # Repository Guidelines
 
+## Critical Note for AI Assistants
+
+This project engages with critical geography and counter-mapping approaches. When working on this codebase:
+- Recognize that spatial categories (parcels, census tracts) are not neutral but carry colonial histories
+- Prioritize analyses that make power visible rather than just documenting inequality
+- Consider alternative methodologies beyond pure quantitative analysis
+- See `docs/CRITICAL_REFLECTIONS.md` for epistemological framework
+
 ## Project Structure & Module Organization
 - `src/` holds Python modules (`data/` loaders for parcels/census/hydrology/OSM, `analysis/` transforms, `viz/` mapping helpers).
 - `notebooks/` is split into `00_exploratory/` for quick passes and `10_analysis/` for refined runs.
@@ -47,3 +55,31 @@
 - Keep secrets in environment variables or a `.env` file loaded via `python-dotenv`; never hardcode credentials.
 - Preserve the separation between `data/raw/` and `data/processed/`; regenerate processed layers rather than editing in place.
 - Export maps via `src/viz/maps.save_map` at 300 dpi and store under `maps/static/` with descriptive names (`river_corridor_v1.png`).
+- Be aware that data categories themselves encode power relations; document these in analysis.
+
+## Alternative Methodologies
+
+Beyond traditional GIS/Python workflows, consider integrating:
+
+### Participatory Methods
+- **Community mapping sessions:** Involve residents in defining spatial questions
+- **Oral history collection:** Document lived experience of place
+- **Photo-voice:** Visual documentation by community members
+- **Walking interviews:** Mobile methods that reveal embodied knowledge
+
+### Contemplative Approaches
+- **Sitting practice with maps:** What arises from sustained attention?
+- **Walking meditation routes:** Data collection as contemplative practice
+- **Deep listening sessions:** Attending to place without extraction
+
+### Counter-Mapping Techniques
+- **Power mapping:** Visualize ownership networks, corporate entities
+- **Inverse analysis:** Map what's absent, hidden, or erased
+- **Temporal layers:** Show displacement and change over time
+- **Uncertainty visualization:** Make visible what we don't know
+
+### Implementation Notes
+- These methods complement but don't replace quantitative analysis
+- Document alternative methods in field notes alongside code
+- Consider mixed-method notebooks that combine computation with reflection
+- Acknowledge when technical methods reach their limits
