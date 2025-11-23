@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "parcel_id": "SF-001",
+        "zoning": "R-1",
+        "area_sqft": 5000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-105.945, 35.655],
+          [-105.944, 35.655],
+          [-105.944, 35.656],
+          [-105.945, 35.656],
+          [-105.945, 35.655]
+        ]]
+      }
+    }
+  ]
+}
+

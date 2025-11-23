@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "GEOID": "35049000100",
+        "NAME": "Census Tract 1",
+        "median_income": 50000,
+        "pct_renters": 0.35
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-105.95, 35.65],
+          [-105.94, 35.65],
+          [-105.94, 35.66],
+          [-105.95, 35.66],
+          [-105.95, 35.65]
+        ]]
+      }
+    }
+  ]
+}
+
