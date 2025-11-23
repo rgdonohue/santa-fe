@@ -2,6 +2,17 @@
 
 Lightweight catalog of datasets used in this project.
 
+## Critical Note on Data Categories
+
+The datasets listed below operate through colonial spatial categories that are not neutral:
+
+- **Parcels** encode private property regimes imposed on Indigenous common lands
+- **Census tracts** were designed for population surveillance and have roots in redlining
+- **Zoning districts** emerged from racial segregation and class exclusion
+- These categories actively construct and maintain particular power relations
+
+While we use these datasets for practical analysis, we must continuously interrogate their origins, purposes, and effects. See `CRITICAL_REFLECTIONS.md` for deeper discussion of these epistemological concerns.
+
 ## Anchor Datasets (v0.1)
 
 ### 1. City Parcels + Zoning
@@ -78,9 +89,26 @@ Processing steps:
 3. Reproject to NM State Plane (EPSG:32113)
 4. Save as GeoPackage (.gpkg)
 
-## Additional Datasets
+## Additional Datasets for Counter-Mapping
 
-*Add as discovered and used*
+### Power Structure Analysis
+- **Property ownership records:** County assessor data for identifying corporate landlords
+- **Short-term rental permits:** City licensing data to map STR concentration
+- **Corporate entity filings:** NM Secretary of State for tracking ownership networks
+- **Eviction filings:** Court records (if accessible) to map displacement pressure
+
+### Community Assets & Alternative Geographies
+- **Mutual aid networks:** Community-sourced data (requires participatory methods)
+- **Sacred/ceremonial sites:** Only with explicit permission from Tewa communities
+- **Walking/biking distances:** Alternative to car-centric distance metrics
+- **Watershed boundaries:** Natural rather than political units
+
+### Historical Context
+- **Redlining maps:** Historical Home Owners' Loan Corporation (HOLC) maps
+- **Historic displacement:** Census historical data on demographic changes
+- **Land grant boundaries:** Historic common lands before privatization
+
+*These alternative datasets help challenge dominant narratives and make power visible*
 
 ---
 
