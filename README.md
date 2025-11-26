@@ -1,20 +1,14 @@
 # Santa Fe Field Notes
 
-*A small, honest body of work about Santa Fe that combines maps, analysis, and lived experience.*
-
-This is a geospatial investigation of Santa Fe, New Mexico—not a dissertation, not a data dump, but something in between. Think of it as field notes from someone trying to understand a place through the lens of where people live, how land is used, and where water flows.
+A geospatial analysis project documenting housing displacement and community responses in Santa Fe, New Mexico.
 
 ![Santa Fe Field Notes](docs/santa-fe-masthead-3.png)
 
-## What This Is
+## Purpose
 
-This project examines housing, displacement, and water in Santa Fe through critical geography. It focuses on:
+Santa Fe faces a housing crisis: 96% of low-income renters are cost-burdened, median home prices have reached $582,000 (double Albuquerque's), and 37% of county workers commute because they can't afford to live where they work. This project maps both the crisis and community-led solutions.
 
-- **Counter-mapping** that shows community alternatives to market-driven development
-- **Power analysis** identifying who owns land and who gets displaced
-- **Field notes** combining data analysis with walking and observation
-
-Each piece includes maps, data analysis, and narrative—aiming for 800-1500 words that connect statistics to lived experience.
+The work focuses on two neighborhoods experiencing intense displacement pressure—Hopewell-Mann and the Airport Road corridor—where grassroots organizations are actively organizing for housing justice. By combining public datasets with community-generated research, the project aims to produce maps and analysis useful for ongoing advocacy efforts.
 
 ## Quick Start
 
@@ -46,22 +40,24 @@ santa-fe/
 └── docs/           # Data sources, ethics, methods
 ```
 
-## The Questions We're Asking
+## Key Research Questions
 
-**Focus areas:**
+1. **Housing**: How many affordable units have community organizations created compared to market-rate development? Where are eviction pressures highest?
 
-1. **Housing & Displacement** — Documenting both displacement pressures (96% of low-income renters are cost-burdened) and community alternatives (Housing Trust's 700+ affordable homes, Chainbreaker's organizing in Hopewell-Mann)
+2. **Ownership**: Who owns Santa Fe's rental properties? How concentrated is ownership among corporate landlords?
 
-2. **Water Governance** — Mapping acequia infrastructure as commons management, Indigenous water rights settlements, and the gap between $68 million infrastructure needs and available funding
+3. **Alternatives**: Where are community land trusts, cooperative housing, and other non-market models succeeding?
 
-The work centers specific neighborhoods (Hopewell-Mann, Airport Road corridor) where community organizations are actively resisting displacement.
+4. **Water**: How do traditional acequia systems challenge privatized water management? What's the gap between infrastructure needs and funding?
 
-## Approach
+## Methodology
 
-- **Critical geography** — Using GIS to question power structures, not naturalize them
-- **Community accountability** — Working with/learning from organizations like Chainbreaker Collective and NM Acequia Association
-- **Counter-mapping** — Visualizing community land trusts, cooperative housing, and traditional water governance as alternatives
-- **Partial and situated** — Maps as one perspective, not authoritative truth
+The project uses GIS to analyze spatial patterns while recognizing that standard geographic categories (census tracts, parcels) encode colonial histories. Key approaches:
+
+- Compare official data with community-generated research (Chainbreaker's displacement profiles, Princeton Eviction Lab data)
+- Aggregate sensitive data to protect privacy (no point-level evictions or individual addresses)
+- Partner with local organizations before publishing maps that could affect their work
+- Document both problems and solutions—not just mapping crisis but highlighting alternatives
 
 ## Data Sources
 
@@ -80,21 +76,37 @@ See `docs/data_sources.md` for sources and `docs/CRITICAL_REFLECTIONS.md` for ep
 
 **Source notes for key stats:** 96% rent burden from Human Impact Partners/Chainbreaker COVID-era research (2021); 5,000+ unit deficit and $582k median price from recent city housing needs assessments (2024); $3M+ AHTF allocation from city ordinance/FY2024 awards; $68M acequia need from NMAA legislative priorities (2025).
 
-## Ethics
+## Ethics & Privacy
 
-This work takes place on Tewa homelands—specifically O'ga P'ogeh (White Shell Water Place). The project aims to support housing justice and Indigenous sovereignty rather than enable surveillance or displacement.
+This work takes place on unceded Tewa homelands. Key commitments:
 
-See `docs/ethics_positionality.md` for framework and `docs/COUNTER_MAPPING_STRATEGY.md` for approach.
+- **No surveillance mapping**: No point-level evictions, individual addresses, or unhoused encampment locations
+- **Partner consent**: Share maps with affected organizations before publication
+- **Aggregate sensitive data**: Blur locations of crisis services, domestic violence shelters, and care networks
+- **Support organizing**: Prioritize analysis that helps community campaigns
 
-## Getting Started
+See `docs/ethics_positionality.md` for detailed framework.
 
-1. Read `PLAN_CORE.md` to understand the approach
-2. Follow `SETUP.md` for environment setup
-3. Run the data preparation notebook
-4. Start your first field note
+## Contributing
 
-**Remember:** Better a small practice done consistently than a grand intention postponed indefinitely.
+This project welcomes contributions that:
+- Add community-generated data sources
+- Improve analysis methods
+- Document housing victories
+- Connect findings to organizing campaigns
+
+Contact information for key community partners:
+- **Chainbreaker Collective**: 505-577-5481 (eviction prevention hotline)
+- **NM Acequia Association**: Research on traditional water governance
+- **S3 Housing Coalition**: Motel conversion projects
+
+## Setup
+
+See `SETUP.md` for detailed environment setup. Basic requirements:
+- Python 3.11+
+- GeoPandas, DuckDB, Jupyter
+- 2GB disk space for processed data
 
 ---
 
-*A project examining displacement and resistance in Santa Fe through maps, data, and field observation.*
+*Supporting housing justice and water sovereignty in Santa Fe through careful data analysis.*
