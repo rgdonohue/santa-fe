@@ -3,7 +3,7 @@
 ## The Colonial Grammar of Geographic Data
 
 ### The Problem
-This project operates primarily through colonial spatial categories—census tracts, parcels, zoning districts. These are not neutral containers but active constructions that emerged from and continue to serve particular power structures:
+This project uses colonial spatial categories—census tracts, parcels, zoning districts. These aren't neutral:
 
 - **Census tracts** were designed for population surveillance and have roots in redlining
 - **Parcels** encode private property regimes imposed on Indigenous common lands
@@ -49,25 +49,24 @@ The current project treats water through:
 - Access (water rights)
 
 ### Alternative Epistemologies
-Indigenous and Buddhist perspectives might understand water as:
-- **Ancestor:** Water that has moved through countless beings
-- **Teacher:** Showing us impermanence and interconnection
-- **Relative:** Deserving respect and reciprocity, not ownership
-- **Sacred:** Holding ceremony and memory
+Indigenous perspectives understand water differently:
+- As relative deserving reciprocity, not ownership
+- Through specific frameworks like Pueblo Action Alliance's #WaterBack
+- Via acequia *repartimiento* (traditional water sharing)
 
 ### Implementation Challenges
-How do we honor these perspectives in GIS without appropriation or romanticization?
+How do we reference these perspectives without appropriation? Working with/learning from organizations is key.
 
 ## The Limits of "Small and Honest"
 
 ### The Critique
-While "small and honest" work has value, it risks:
-- Missing systemic connections (Santa Fe's housing crisis connects to global capital flows)
-- Providing false modesty that obscures real impact
-- Avoiding the bigger questions of structural transformation
+"Small and honest" work risks:
+- Missing systemic connections (Santa Fe's housing crisis connects to global capital)
+- False modesty that avoids structural questions
+- Limiting scope when broader analysis is needed
 
 ### The Deeper Question
-Is "honest" mapping possible within colonial frameworks? Or does honesty require acknowledging that the entire enterprise of Western cartography is entangled with domination?
+Can mapping be "honest" within colonial frameworks? The tension is productive—use the tools while questioning them.
 
 ## Technical Attachment vs. Methodological Pluralism
 
@@ -86,7 +85,7 @@ The project shows deep investment in:
 - Community-based validation
 
 ### The Challenge
-How do we value technical rigor without fetishizing it? How do we integrate other ways of knowing without treating them as mere supplements to "real" (quantitative) analysis?
+Balance technical rigor with other methods. Walking, oral history, and participatory mapping aren't supplements—they're equally valid approaches.
 
 ## From Harm Reduction to Liberation
 
@@ -99,6 +98,13 @@ What would it mean to orient toward:
 - **Redistribution:** Making visible wealth concentration to support its undoing
 - **Resistance:** Creating tools for movements fighting displacement
 - **Reimagination:** Visualizing alternative futures beyond current property regimes
+
+### Concrete Examples from Santa Fe
+Local initiatives show both possibilities and limits:
+- **S3 Housing Initiative** created 122+ units outside market logic
+- **Housing Trust CLT** preserves 90 units permanently affordable
+- **Living wage** ($15/hr) helps but doesn't address property relations
+- These improve lives without fundamental transformation
 
 ## Counter-Mapping Possibilities
 
@@ -130,6 +136,56 @@ Instead of mapping what is, map:
 - **Study counter-mapping:** Examples from Latin America, Indonesia
 - **Engage feminist GIS:** Questions about emotion, embodiment, care
 
+## Critical Reading of the Quality of Life Report
+
+### What the Report Celebrates vs. What It Obscures
+
+The QOL report emphasizes collaboration and data-driven solutions:
+
+**Celebrated:**
+- Public-private partnerships
+- Service delivery metrics
+- Nonprofit efficiency
+- Grant funding success
+
+**Obscured:**
+- Power imbalances within "collaborations"
+- Who decides what data matters
+- Structural causes of problems being "solved"
+- Indigenous sovereignty claims
+
+### The Liberal Reform Trap
+
+The report's initiatives improve lives but also:
+- Stabilize rather than transform systems
+- May enable continued gentrification
+- Create nonprofit dependency on foundation wealth
+- Frame Indigenous people as stakeholders rather than sovereigns
+
+### Data as Depoliticization
+
+The "Santa Fe Data Platform" with "1 million data points" suggests objectivity, but:
+- Categories remain colonial (census tracts, police districts)
+- "Community validation" happens within preset frameworks
+- Quantification displaces political questions
+- Success metrics avoid questioning property relations
+
+## Learning from Community Organizations
+
+### Chainbreaker Collective's Praxis
+Chainbreaker (700 members) demonstrates how to combine direct service (eviction hotline: 505-577-5481) with structural analysis. Their Hopewell-Mann Stabilization Plan shows community planning as alternative to developer-led gentrification. Their research with Human Impact Partners produces rigorous displacement data while maintaining accountability to affected residents.
+
+### Indigenous Sovereignty Frameworks
+- **Tewa Women United's** *wi don gi mu* ("we are one") connects individual healing to land healing
+- **Pueblo Action Alliance's** #WaterBack campaign reframes water rights as spiritual/cultural reciprocity
+- **Three Sisters Collective** creates Indigenous women/femme space outside colonial gender binaries
+
+### Acequia Governance as Counter-Model
+NMAA's Congreso de Las Acequias demonstrates non-state governance through traditional *repartimiento* (water sharing). With $68 million infrastructure need, acequias face material crisis while maintaining commons practices that challenge privatization.
+
+### From Service to Organizing
+Organizations like Somos Un Pueblo Unido (3,500+ members) show evolution from service provision to power building. Their worker center addresses immediate wage theft while organizing for systemic change (living wage victory).
+
 ## Questions for Ongoing Reflection
 
 1. How can this project support Tewa sovereignty rather than settler planning?
@@ -139,6 +195,12 @@ Instead of mapping what is, map:
 5. How do we practice reciprocity with the communities we map?
 6. What would decolonizing GIS actually require?
 7. How do we stay accountable to movements for housing justice?
+8. **How do we use QOL report data critically without endorsing its framework?**
+9. **Can reform initiatives like S3 Housing be stepping stones to transformation?**
+10. **How do we honor the real help these programs provide while maintaining radical critique?**
+11. **How do we support Chainbreaker's organizing without extracting their knowledge?**
+12. **What protocols should govern use of Indigenous spatial data?**
+13. **How can mapping support acequia infrastructure needs while preserving governance autonomy?**
 
 ## Reading List
 

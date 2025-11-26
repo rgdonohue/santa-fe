@@ -1,116 +1,89 @@
 # Data Sources
 
-Lightweight catalog of datasets used in this project.
+Lightweight catalog of datasets used in this project, with provenance for key stats and guidance on what to map (and what not to map).
 
 ## Critical Note on Data Categories
 
-The datasets listed below operate through colonial spatial categories that are not neutral:
+The core datasets rely on colonial spatial categories—parcels, census tracts, zoning districts—that encode private property regimes and state surveillance. Use them critically. See `CRITICAL_REFLECTIONS.md` for epistemological concerns.
 
-- **Parcels** encode private property regimes imposed on Indigenous common lands
-- **Census tracts** were designed for population surveillance and have roots in redlining
-- **Zoning districts** emerged from racial segregation and class exclusion
-- These categories actively construct and maintain particular power relations
+## Provenance for Frequently Cited Numbers
 
-While we use these datasets for practical analysis, we must continuously interrogate their origins, purposes, and effects. See `CRITICAL_REFLECTIONS.md` for deeper discussion of these epistemological concerns.
+- **96% rent burden (low-income renters):** Human Impact Partners + Chainbreaker, "Evictions in the COVID-19 Era" (2021)
+- **5,000+ unit housing gap / $582k median home price:** City housing needs assessments (2024 market studies; Realtors Assoc. of NM reports)
+- **$3M+ Affordable Housing Trust Fund annual allocation:** City of Santa Fe AHTF ordinance and FY2024 award docs
+- **122-unit Santa Fe Suites motel conversion / Lamplighter acquisition:** S3 Santa Fe Housing Initiative press releases (2020–2022)
+- **$68M acequia infrastructure need:** NMAA legislative priorities (2025)
+- **Living wage $15/hr (2025):** City of Santa Fe Living Wage Ordinance
 
 ## Anchor Datasets (v0.1)
 
-### 1. City Parcels + Zoning
-- **Source:** City of Santa Fe GIS Portal
-- **URL:** https://www.santafenm.gov/gis
-- **Download:** Manual download from GIS portal (search for "Parcels" or "Zoning")
-- **Alternative:** ArcGIS Online - search "Santa Fe parcels"
-- **Format:** Shapefile/GeoJSON
-- **Update frequency:** Varies (check with city)
-- **Processing:** See `notebooks/00_exploratory/000_data_prep.ipynb`
-- **Notes:** Legal containers for land + zoning classifications
+### Parcels + Zoning
+- **Source:** City of Santa Fe GIS Portal (ArcGIS Online)
+- **URL:** https://santafenm.gov/gis (search "Parcels" / "Zoning")
+- **Format:** Shapefile/GeoPackage; CRS often EPSG:2257; reproject to project CRS
+- **Notes:** Legal land containers; use for joins with ownership/zoning analysis
 
-### 2. Census Tracts + ACS Demographics
-- **Source:** U.S. Census Bureau
-  - **Tracts:** TIGER/Line Shapefiles
-  - **Demographics:** American Community Survey (ACS) API
-- **TIGER URL:** https://www2.census.gov/geo/tiger/TIGER2022/TRACT/
-- **ACS API:** https://api.census.gov/data/ (requires API key)
-- **API Key:** Get from https://api.census.gov/data/key_signup.html
-- **Format:** Shapefile + CSV/JSON (via API)
-- **Update frequency:** Annual (TIGER), 5-year ACS estimates
-- **FIPS Codes:** State: 35 (NM), County: 049 (Santa Fe), Place: 70490 (Santa Fe city)
-- **Processing:** Automated via `src/data/download.py`
+### Census Tracts + ACS Demographics
+- **Source:** U.S. Census TIGER/Line + ACS 5-year
+- **URLs:** https://www2.census.gov/geo/tiger/TIGER2022/TRACT/ and https://api.census.gov/data/
+- **Format:** Shapefile + API CSV/JSON
+- **Notes:** Income, tenure, rent burden; requires API key
 
-### 3. Santa Fe River + Hydrology
-- **Source:** OpenStreetMap (default), with alternatives below
-- **Primary:** OSM via Overpass API - automated download
-- **Format:** GeoJSON → processed to GeoPackage
-- **Update frequency:** Continuous (OSM updated daily)
-- **Alternatives:**
-  1. **NM State GIS** - https://www.nmgis.org/ (search "hydrology" or "water")
-  2. **USGS 3D Hydrography Program (3DHP)** - https://www.usgs.gov/3d-hydrography-program/access-3dhp-data-products
-     - Note: NHD was retired in October 2023, replaced by 3DHP
-     - HUC Region: 1302 (Upper Rio Grande)
-- **Processing:** See `notebooks/00_exploratory/000_data_prep.ipynb`
-- **Notes:** OSM provides good coverage for Santa Fe area; includes rivers, streams, canals, and waterbodies
+### Hydrology (Santa Fe River + Arroyos)
+- **Source:** USGS 3D Hydrography Program (replaces NHD) + city water layers where available
+- **URL:** https://www.usgs.gov/3d-hydrography-program/access-3dhp-data-products
+- **Format:** GDB/Shapefile/GeoPackage
+- **Notes:** Use for river/arroyo context; clip to city limits
 
-### 4. OSM Roads + POIs
-- **Source:** OpenStreetMap
-- **Methods:**
-  1. **Overpass API** (custom area) - Used by default in download script
-  2. **GeoFabrik** - New Mexico extract: https://download.geofabrik.de/north-america/us/new-mexico-latest-free.shp.zip
-- **Format:** GeoJSON (Overpass) or Shapefile (GeoFabrik)
-- **Update frequency:** Continuous (OSM is updated daily)
-- **Processing:** See `notebooks/00_exploratory/000_data_prep.ipynb`
-- **Notes:** Includes highways, roads, amenities, shops
+### Roads + POIs
+- **Source:** OpenStreetMap (GeoFabrik Southwest extract or Overpass API)
+- **URL:** https://download.geofabrik.de/north-america/us/southwest.html
+- **Format:** PBF → GeoPackage/GeoJSON
+- **Notes:** Streets, services, landmarks; refresh as needed
 
-### 5. City Limits Boundary
-- **Source:** 
-  1. Census TIGER/Line Places (automated)
-  2. City of Santa Fe GIS (manual)
-- **TIGER URL:** https://www2.census.gov/geo/tiger/TIGER2022/PLACE/
-- **City GIS:** https://www.santafenm.gov/gis
-- **Format:** Shapefile
-- **Update frequency:** Annual (TIGER), varies (city)
-- **Processing:** Automated - filters for Santa Fe city (PLACEFP=70490)
+### City Limits
+- **Source:** TIGER/Line Places (PLACEFP=70490) or City GIS boundary
+- **URL:** https://www2.census.gov/geo/tiger/TIGER2022/PLACE/
+- **Format:** Shapefile/GeoPackage
+- **Notes:** Used for clipping/extent
 
-## Download Instructions
+## Counter-Mapping Layers
 
-**Automated Download:**
-Run `notebooks/00_exploratory/000_data_prep.ipynb` to download most datasets automatically.
+### Housing / Displacement
+- **Eviction burden:** Princeton Eviction Lab block-group CSV (https://evictionlab.org/) — aggregate only; no point-level filings
+- **Community-created housing:** S3 motel conversions (Santa Fe Suites 122 units; Lamplighter acquisition) and Housing Trust CLT parcels — manual geocoding from press releases/AHTF awards
+- **Cost burden & living wage:** ACS cost-burden tables + City Living Wage Ordinance geography ($15/hr in 2025)
+- **Chainbreaker profiles:** Hopewell-Mann and Airport Road displacement profiles (HIP/Chainbreaker 2021)
 
-**Manual Downloads:**
-- City parcels: Requires manual download from city GIS portal
-- Some datasets may need manual intervention if automated download fails
+### Water & Commons
+- **Acequia network:** NM OSE Acequia Mapping Project (2017–2019) from https://gis.ose.state.nm.us/
+- **Water rights settlements:** Aamodt Settlement (2017), Ohkay Owingeh Settlement (2023) — court/legislative records for summary attributes
+- **Indigenous lands:** BIA Tract Viewer (respect data sensitivity; use only with permission)
 
-## Data Processing
+### Care Networks (from QOL survey)
+- **Diversion and crisis response:** LEAD/Thrive sites; La Sala Crisis Center (Santa Fe County); CONNECT network nodes (aggregate to neighborhoods or grid)
+- **Youth support:** YouthWorks sites; Communities in Schools (11 schools) — map as area/cluster, not individuals
+- **Health safety net:** La Familia Medical Center, FQHCs; use facility points only if partners agree
 
-All raw data goes to `data/raw/`. Processing (reprojection, clipping, joining) saves to `data/processed/`.
+## What to Map vs. What to Avoid (from QOL report)
 
-Processing steps:
-1. Set CRS if missing (assumes EPSG:4326)
-2. Clip to city limits (if available)
-3. Reproject to NM State Plane (EPSG:32113)
-4. Save as GeoPackage (.gpkg)
+| Category | Map | Avoid |
+| --- | --- | --- |
+| Housing | S3 sites, CLT parcels, AHTF-funded projects (aggregated) | Point-level eviction filings or individual addresses of unhoused residents |
+| Public health/care | Facility locations (clinics, crisis centers) with partner consent; CONNECT coverage areas | Individual patient/service data; any identifiable crisis locations |
+| Education/youth | School sites (Communities in Schools), YouthWorks hubs | Individual student-level data or sensitive program addresses (domestic violence shelters) |
+| Public safety | LEAD/Thrive service zones, non-police crisis response coverage | Crime hotspotting that could stigmatize neighborhoods |
+| Indigenous/acequia | Acequia lines (public), settlement footprints with context | Sacred/ceremonial sites without explicit permission |
 
-## Additional Datasets for Counter-Mapping
+## Processing & Storage
 
-### Power Structure Analysis
-- **Property ownership records:** County assessor data for identifying corporate landlords
-- **Short-term rental permits:** City licensing data to map STR concentration
-- **Corporate entity filings:** NM Secretary of State for tracking ownership networks
-- **Eviction filings:** Court records (if accessible) to map displacement pressure
+- Raw downloads → `data/raw/`; processed GeoPackages → `data/processed/`
+- Standard CRS: EPSG:32113 (analysis) and EPSG:3857 (web map tiles); document CRS per layer
+- Sensitive data: keep out of repo; aggregate/blurring required for any person-level data
 
-### Community Assets & Alternative Geographies
-- **Mutual aid networks:** Community-sourced data (requires participatory methods)
-- **Sacred/ceremonial sites:** Only with explicit permission from Tewa communities
-- **Walking/biking distances:** Alternative to car-centric distance metrics
-- **Watershed boundaries:** Natural rather than political units
+## Community Return & Citation
 
-### Historical Context
-- **Redlining maps:** Historical Home Owners' Loan Corporation (HOLC) maps
-- **Historic displacement:** Census historical data on demographic changes
-- **Land grant boundaries:** Historic common lands before privatization
+- Share finished layers/maps with Chainbreaker, NMAA, Pueblo partners, and S3 coalition before publication.
+- Cite community sources (HIP/Chainbreaker profiles, acequia linework credits, S3 press releases) alongside official datasets in notebooks and stories.
 
-*These alternative datasets help challenge dominant narratives and make power visible*
-
----
-
-**Last updated:** December 2024
-
+**Last updated:** 2025-02-11

@@ -26,7 +26,7 @@ By ~end of January, I want:
 
    - From raw downloads → processed tables/shapes → analysis-ready layers.
 
-Success = small, finished artifacts that feel true, not exhaustive coverage.
+Success = completed work that's useful to community organizations, not comprehensive coverage.
 
 ---
 
@@ -34,9 +34,9 @@ Success = small, finished artifacts that feel true, not exhaustive coverage.
 
 The first question I care about:
 
-> **"Who lives where in relation to water and land-use constraints?"**
+> **"How do community-led initiatives create alternatives to displacement, and what power structures shape housing access?"**
 
-To answer a first, rough version of that, I'll:
+To explore this, I'll:
 
 1. **Set up repo + minimal structure**
 
@@ -48,47 +48,45 @@ To answer a first, rough version of that, I'll:
 
    - Pin: `python`, `geopandas`, `pandas`, `duckdb`, `jupyter`, `contextily` (or similar).
 
-3. **Download 4 anchor datasets (on purpose):**
+3. **Download anchor datasets + power structure data:**
 
-   - **City parcels + zoning (city GIS)**  
+   **Colonial Categories (use critically):**
+   - **City parcels + zoning** → Legal containers for land
+   - **Census tracts + ACS demographics** → Official demographics
+   - **Santa Fe River + hydrology** → Water as mapped resource
+   - **OSM roads + POIs** → Infrastructure networks
 
-     → Where are the legal containers for land + how are they classified?
+   **Counter-Mapping Data (from community research):**
+   - **S3 Housing Initiative sites** → Motel conversions (Santa Fe Suites, Lamplighter)
+   - **Chainbreaker displacement profiles** → Hopewell-Mann (75% renters, $31,576 median income)
+   - **Housing Trust CLT properties** → 90-unit scattered-site preserving affordability
+   - **Acequia infrastructure** → NM OSE Acequia Mapping Project linework
+   - **Living wage geography** → $15/hr minimum wage impact zones
+   - **Princeton Eviction Lab data** → 80+ million records at block group level
 
-   - **Census tracts + ACS demographics**  
-
-     → Who lives where: income, race/ethnicity, housing tenure, etc.
-
-   - **Santa Fe River + arroyos / hydrology layer**  
-
-     → Where water and flow paths actually sit in space.
-
-   - **OSM roads + POIs**  
-
-     → Everyday infrastructure: streets, services, landmarks.
-
-   Together, these let me make a first map of **people + parcels + zoning + water + roads** — a structural snapshot touching at least **3 themes** (land/housing, water, mobility).
+   These datasets let me compare official categories with community-generated data.
 
 4. **Make one exploratory notebook**
 
-   - `notebooks/00_exploratory/001_who_lives_where.ipynb`
+   - `notebooks/00_exploratory/001_housing_power_alternatives.ipynb`
 
    - Tasks:
 
-     - Load the 4 datasets.
-
-     - Clip to Santa Fe city limits.
-
-     - Simple maps: parcels over census tracts, river, and main roads.
-
-     - 2–3 quick stats (e.g., median income by distance to river, % renters by zoning category).
+     - Load both colonial categories AND counter-mapping data
+     - Map S3 housing sites against displacement pressure zones
+     - Visualize living wage impact vs. housing cost burden
+     - Calculate: units created through community action vs. market rate development
+     - Identify: Major nonprofit/foundation property holdings
 
 5. **Draft first field note (even if rough)**
 
-   - `stories/drafts/field_note_01.md`
+   - `stories/drafts/field_note_01_hopewell_mann_resistance.md`
 
-   - Anchor it in a real walk or bike ride through my neighborhood.
-
-   - Use 1–2 figures from the notebook, even if they're imperfect.
+   - Walk the Hopewell-Mann corridor (Chainbreaker's focus area)
+   - Document O'ga P'ogeh (White Shell Water Place) - Tewa name for Santa Fe
+   - Interview Chainbreaker member about Neighborhood Stabilization Plan
+   - Contrast community vision with developer pressure
+   - Map acequia networks as alternative governance structures
 
 I can refine later. The point is to establish the full pipeline **once**.
 
@@ -130,8 +128,8 @@ When I'm staring at 15 themes and 40 datasets, I'll prioritize work that:
 
 7. **Teaches me something about my immediate lived environment**
 
-   - Bonus points if it changes how I walk, ride, or relate to the city.
-   - Extra bonus if it reveals hidden power structures in familiar places.
+   - Changes how I walk, ride, or relate to the city
+   - Reveals power structures in familiar places
 
 If a project doesn't hit at least **4/7** of these, it goes in the backlog, not the active queue.
 
@@ -234,14 +232,35 @@ For now I'll lean toward:
 1. **Land & Housing** — with focus on displacement mechanisms and resistance
 2. **Water & Watershed** — understanding water as relation, not resource
 
-**Counter-Mapping Approaches:**
+**Counter-Mapping Approaches (Informed by QOL Report):**
 
 Instead of just documenting what is, actively map:
 
-* **Power structures:** Corporate landlords, investment properties, STR concentrations
-* **Displacement pressure:** Where long-term residents are fighting to stay
-* **Community assets:** Mutual aid networks, gathering spaces, sacred sites (with permission)
-* **Alternative futures:** Community land trust possibilities, Indigenous governance models
+* **Power structures to expose:**
+  - 37% of county workers commute (can't afford local housing)
+  - 96% of low-income renters experience rent burden
+  - Corporate/STR ownership vs community land trusts
+  - $68 million acequia infrastructure need vs funding gaps
+
+* **Community-controlled alternatives:**
+  - Chainbreaker's Hopewell-Mann Stabilization Plan (700 members)
+  - Housing Trust CLT: 700+ homes, 90-unit scattered site
+  - Acequia governance: Traditional *repartimiento* water sharing
+  - Tewa Women United: *wi don gi mu* ("we are one")
+  - Pueblo Action Alliance: #WaterBack campaign
+
+* **Resistance networks & mutual aid:**
+  - Somos Un Pueblo Unido: 3,500+ members, worker center
+  - Three Sisters Collective: Indigenous women/femme space
+  - Food Depot: 28.3 million pounds distributed
+  - Earth Care: Southside environmental justice
+  - NMAA: Congreso de Las Acequias federation
+
+* **Data sovereignty & counter-knowledge:**
+  - Chainbreaker-Human Impact Partners displacement profiles
+  - Princeton Eviction Lab: 80+ million records
+  - OSE Acequia Mapping: Traditional governance visualization
+  - Indigenous place names: O'ga P'ogeh vs "Santa Fe"
 
 **Ethical stance (summary):**
 

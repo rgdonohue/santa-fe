@@ -8,13 +8,13 @@ This is a geospatial investigation of Santa Fe, New Mexico—not a dissertation,
 
 ## What This Is
 
-This project asks questions like: *Who lives where in relation to water and land-use constraints?* It combines:
+This project examines housing, displacement, and water in Santa Fe through critical geography. It focuses on:
 
-- **Maps** that tell spatial stories
-- **Analysis** that reveals patterns
-- **Narrative** that grounds numbers in lived experience
+- **Counter-mapping** that shows community alternatives to market-driven development
+- **Power analysis** identifying who owns land and who gets displaced
+- **Field notes** combining data analysis with walking and observation
 
-Each "field note" is a small, finished piece—800–1500 words, at least one map, one chart, and a reflection on what the data reveals about this place.
+Each piece includes maps, data analysis, and narrative—aiming for 800-1500 words that connect statistics to lived experience.
 
 ## Quick Start
 
@@ -48,36 +48,43 @@ santa-fe/
 
 ## The Questions We're Asking
 
-**Anchor themes for v0.1:**
+**Focus areas:**
 
-1. **Land & Housing** — Who lives where? How does zoning shape the city?
-2. **Water & Watershed** — Where does water flow? How does proximity to water relate to where people live?
+1. **Housing & Displacement** — Documenting both displacement pressures (96% of low-income renters are cost-burdened) and community alternatives (Housing Trust's 700+ affordable homes, Chainbreaker's organizing in Hopewell-Mann)
 
-These aren't abstract questions. They're grounded in walks through neighborhoods, observations of daily life, and curiosity about how this place works.
+2. **Water Governance** — Mapping acequia infrastructure as commons management, Indigenous water rights settlements, and the gap between $68 million infrastructure needs and available funding
 
-## What Makes This Different
+The work centers specific neighborhoods (Hopewell-Mann, Airport Road corridor) where community organizations are actively resisting displacement.
 
-- **Small and finished** — We prioritize completed field notes over exhaustive coverage
-- **Ethical and reflective** — Maps are partial views, not neutral truths. We ask "who could be harmed?" before publishing
-- **Reproducible** — Clean data pipelines, documented sources, version-controlled code
-- **Honest** — Acknowledges limitations, lived experience, and the complexity of mapping a place
+## Approach
+
+- **Critical geography** — Using GIS to question power structures, not naturalize them
+- **Community accountability** — Working with/learning from organizations like Chainbreaker Collective and NM Acequia Association
+- **Counter-mapping** — Visualizing community land trusts, cooperative housing, and traditional water governance as alternatives
+- **Partial and situated** — Maps as one perspective, not authoritative truth
 
 ## Data Sources
 
-We work with five anchor datasets:
-- Census tracts + ACS demographics
-- City parcels + zoning
-- Hydrology (rivers, streams, arroyos)
-- OSM roads + POIs
-- City limits boundary
+Colonial spatial categories (used critically):
+- Census tracts, parcels, zoning districts
+- Official hydrology layers
 
-See `docs/data_sources.md` for detailed sources, download instructions, and processing notes.
+Community-generated research:
+- Chainbreaker displacement profiles (Hopewell-Mann)
+- Princeton Eviction Lab data (block group level)
+- NM OSE Acequia Mapping Project
+- Housing Trust CLT properties
+- S3 motel conversions (Santa Fe Suites 122 units; Lamplighter acquisition)
 
-## Ethical Stance
+See `docs/data_sources.md` for sources and `docs/CRITICAL_REFLECTIONS.md` for epistemological concerns about these categories.
 
-This work happens on Tewa homelands, in a complex colonial city. We avoid maps that expose vulnerable people or sensationalize suffering. We prioritize context, care, and questions that matter beyond our own curiosity.
+**Source notes for key stats:** 96% rent burden from Human Impact Partners/Chainbreaker COVID-era research (2021); 5,000+ unit deficit and $582k median price from recent city housing needs assessments (2024); $3M+ AHTF allocation from city ordinance/FY2024 awards; $68M acequia need from NMAA legislative priorities (2025).
 
-See `docs/ethics_positionality.md` for the full framework.
+## Ethics
+
+This work takes place on Tewa homelands—specifically O'ga P'ogeh (White Shell Water Place). The project aims to support housing justice and Indigenous sovereignty rather than enable surveillance or displacement.
+
+See `docs/ethics_positionality.md` for framework and `docs/COUNTER_MAPPING_STRATEGY.md` for approach.
 
 ## Getting Started
 
@@ -90,5 +97,4 @@ See `docs/ethics_positionality.md` for the full framework.
 
 ---
 
-*"Who lives where in relation to water and land-use constraints?"* — That's where we start.
-
+*A project examining displacement and resistance in Santa Fe through maps, data, and field observation.*

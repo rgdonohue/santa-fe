@@ -78,8 +78,8 @@ Acknowledge what quantitative spatial analysis cannot capture:
 - Cite sources and acknowledge limitations
 - Be transparent about methods, assumptions, and uncertainties
 - Refuse requests for analysis that could enable harm
+- Do not map point-level sensitive data (evictions, crisis calls, domestic violence shelters, unhoused encampments); aggregate, blur, and secure partner consent before publishing care-related locations
 
 ---
 
 **This is a living document. Revisit and revise as the work evolves.**
-
